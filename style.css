@@ -1,0 +1,517 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    position: relative;
+    min-height: 360px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f172a, #172554, #1e40af);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid #3b82f6;
+}
+
+.cabecalho-conteudo {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    padding: 20px;
+}
+
+.linha-superior,
+.linha-inferior {
+    width: 80px;
+    height: 3px;
+    background: #60a5fa;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.linha-superior {
+    margin-bottom: 25px;
+}
+
+.linha-inferior {
+    margin-top: 22px;
+}
+
+
+/* =========================
+   NOME ELSE TECH
+========================= */
+
+.cabecalho-conteudo h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 62px;
+    font-weight: 800;
+    letter-spacing: 7px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 0 18px rgba(96, 165, 250, 0.35);
+}
+
+.cabecalho-conteudo p {
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #bfdbfe;
+    margin-bottom: 12px;
+}
+
+.cabecalho-conteudo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* =========================
+   DECORAÇÕES LATERAIS
+========================= */
+
+.decoracao-lateral {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    z-index: 2;
+}
+
+.decoracao-lateral.esquerda {
+    left: 4%;
+}
+
+.decoracao-lateral.direita {
+    right: 4%;
+}
+
+
+/* =========================
+   MONITOR
+========================= */
+
+.monitor {
+    width: 135px;
+}
+
+.monitor-tela {
+    width: 135px;
+    height: 88px;
+    border: 6px solid #94a3b8;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #2563eb, #0f172a);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+.monitor-base {
+    width: 55px;
+    height: 13px;
+    background: #94a3b8;
+    margin: 0 auto;
+    position: relative;
+}
+
+.monitor-base::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 8px;
+    background: #64748b;
+    border-radius: 5px;
+    left: -12px;
+    top: 12px;
+}
+
+
+/* =========================
+   IMPRESSORA
+========================= */
+
+.impressora {
+    width: 125px;
+    height: 105px;
+    position: relative;
+}
+
+.impressora-corpo {
+    position: absolute;
+    bottom: 0;
+    width: 125px;
+    height: 72px;
+    background: #cbd5e1;
+    border-radius: 10px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.impressora-corpo::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 10px;
+    background: #64748b;
+    border-radius: 5px;
+    left: 22px;
+    top: 22px;
+}
+
+.impressora-corpo::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 8px;
+    background: #334155;
+    border-radius: 5px;
+    left: 35px;
+    bottom: 13px;
+}
+
+.papel {
+    position: absolute;
+    z-index: 2;
+    width: 65px;
+    height: 43px;
+    background: white;
+    left: 30px;
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   APRESENTAÇÃO
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+.inicio {
+    text-align: center;
+    border-top: 4px solid #2563eb;
+}
+
+.icone-destaque {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.inicio h2 {
+    font-size: 30px;
+    color: #1d4ed8;
+    margin-bottom: 15px;
+}
+
+.inicio p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 17px;
+    color: #475569;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+    margin-top: 25px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background: #16a34a;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SERVIÇOS
+========================= */
+
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.servicos h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 30px;
+    color: #1d4ed8;
+}
+
+.card-servico {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #dbeafe;
+    border-left: 4px solid #2563eb;
+    transition: 0.2s;
+}
+
+.card-servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.12);
+}
+
+.icone-card {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.card-servico h3 {
+    font-size: 21px;
+    color: #1e40af;
+    margin-bottom: 8px;
+}
+
+.card-servico p {
+    color: #475569;
+}
+
+
+/* =========================
+   PREÇOS
+========================= */
+
+.precos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.precos h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 30px;
+    color: #1d4ed8;
+}
+
+.card-preco {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #dbeafe;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.card-preco:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.12);
+}
+
+.icone-preco {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.card-preco h3 {
+    font-size: 21px;
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.card-preco p {
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.card-preco strong {
+    display: block;
+    font-size: 32px;
+    color: #2563eb;
+}
+
+
+/* =========================
+   CHAMADA FINAL
+========================= */
+
+.chamada-final {
+    text-align: center;
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+    border-top: 4px solid #2563eb;
+}
+
+.equipamentos-final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.equipamentos-final span {
+    font-size: 60px;
+}
+
+.chamada-final h2 {
+    font-size: 28px;
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+.chamada-final p {
+    color: #475569;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 4px solid #2563eb;
+}
+
+footer p {
+    margin: 6px;
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   CELULAR / TELA MENOR
+========================= */
+
+@media (max-width: 1100px) {
+
+    .decoracao-lateral {
+        transform: translateY(-50%) scale(0.65);
+    }
+
+    .decoracao-lateral.esquerda {
+        left: -15px;
+    }
+
+    .decoracao-lateral.direita {
+        right: -15px;
+    }
+
+    .cabecalho-conteudo h1 {
+        font-size: 52px;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .decoracao-lateral {
+        transform: translateY(-50%) scale(0.45);
+    }
+
+    .decoracao-lateral.esquerda {
+        left: -45px;
+    }
+
+    .decoracao-lateral.direita {
+        right: -45px;
+    }
+
+    .cabecalho-conteudo h1 {
+        font-size: 48px;
+        letter-spacing: 5px;
+    }
+
+    .cabecalho-conteudo p {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    header {
+        min-height: 290px;
+        padding: 40px 20px;
+    }
+
+    /* Esconde os equipamentos antes que encostem no nome */
+    .decoracao-lateral {
+        display: none;
+    }
+
+    .cabecalho-conteudo {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .cabecalho-conteudo h1 {
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+
+    .cabecalho-conteudo p {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .cabecalho-conteudo span {
+        font-size: 17px;
+    }
+
+    main {
+        margin-top: 25px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    .servicos,
+    .precos {
+        grid-template-columns: 1fr;
+    }
+
+    .equipamentos-final {
+        gap: 15px;
+    }
+
+    .equipamentos-final span {
+        font-size: 45px;
+    }
+}

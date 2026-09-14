@@ -1,0 +1,5 @@
+1|joão|11999999999|dell
+2|Maria|11999999999|Notbook
+3|Pedro|119888888888|Notbook
+4|Carlos|1197777777777|Lenovo
+5|Cleiton|119555556666|Sony
